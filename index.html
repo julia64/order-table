@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>order table</title>
+        
+    </head>
+    <body>
+        <div>请输入房间数：<input type="text" name="email" id="room_num" value=""/></div>
+        <div>请输入项目数量：<input type="text" name="email" id="item_num" value=""/></div>
+        <input type="file" id="file" style="display:none;" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+        <a href="javascript:selectFile()">加载本地excel文件</a>
+        <button type="button" onclick="submit()">提交</button>
+        <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="js/xlsx.core.min.js"></script>
+        <script type="text/javascript" src="test.js"></script>
+        
+    </body>
+</html>
