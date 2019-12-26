@@ -274,7 +274,16 @@ function run() {
         }
     }
 
-    console.log('order_room', order_room);
+    // 只打印房间和对应的机构名称
+    let room_show = new Array;
+    for(let i = 0; i < order_room.length; i++) {
+        room_show[i] = new Array;
+        for(let j = 0; j < order_room[i].length; j++) {
+            room_show[i].push(order_room[i][j].name);
+        }
+    }
+
+    console.log('room_show', room_show);
 
     /**
      * 创业者房间安排（生成指定表格）
@@ -325,7 +334,7 @@ function run() {
             while(order_table[item-1][col] !== 0 || checkRepeat(order_table, maxIdx + 1, item - 1, col)) {
                 col++;
                 if(col > 7) {
-                    throw Error('问题3')
+                    throw Error('请更换Excel表中投资人的顺序');
                     return;
                 }
             }
